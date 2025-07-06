@@ -1,0 +1,236 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "abd669ef-9595-4a7a-9058-e21c1f64fe4f")
+	(paper "A4")
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 152.4 77.47) (xy 161.29 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0cd590f0-8a23-4954-85ac-eaf453eca736")
+	)
+	(wire
+		(pts
+			(xy 100.33 88.9) (xy 115.57 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "111f2bdf-476d-4736-9cd1-8c47cf2412f4")
+	)
+	(wire
+		(pts
+			(xy 100.33 77.47) (xy 115.57 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46227edd-70f1-4bc3-a2e8-6bec24271258")
+	)
+	(wire
+		(pts
+			(xy 100.33 81.28) (xy 115.57 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d7bdf77-5f25-4cd7-8e63-c89a28ea3ce9")
+	)
+	(wire
+		(pts
+			(xy 152.4 81.28) (xy 161.29 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81ad70c0-faf7-4964-95bd-fb56b8f6e78a")
+	)
+	(wire
+		(pts
+			(xy 100.33 85.09) (xy 115.57 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5ec3278-55da-48ca-beb7-dea50395b2b9")
+	)
+	(hierarchical_label "CIN"
+		(shape input)
+		(at 100.33 77.47 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "166db603-878c-45e9-aeef-74c0cadb2875")
+	)
+	(hierarchical_label "COUT"
+		(shape output)
+		(at 161.29 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3690802a-578c-4d82-aef6-4b8575ee2782")
+	)
+	(hierarchical_label "DIN"
+		(shape input)
+		(at 100.33 81.28 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "81de71b6-4064-4bd9-a882-aebf9e62ce48")
+	)
+	(hierarchical_label "DOUT"
+		(shape output)
+		(at 161.29 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "85b9348b-f87c-4396-989b-0fc8e3a12705")
+	)
+	(hierarchical_label "+5V"
+		(shape input)
+		(at 100.33 88.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d812addb-cb5b-4acf-99a1-85d8e7661117")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 100.2947 85.1291 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "de5d3655-89cc-4e0e-b653-94983b19a99e")
+	)
+	(sheet
+		(at 115.57 73.66)
+		(size 36.83 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3c74e7bc-93cb-469e-8a64-914a78945587")
+		(property "Sheetname" "4LED_Arms"
+			(at 115.57 72.9484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "4LED_Arms.kicad_sch"
+			(at 115.57 92.0246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CIN" input
+			(at 115.57 77.47 180)
+			(uuid "160bf8b2-b2d5-47af-aa2b-faba4a79b3ac")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "COUT" output
+			(at 152.4 77.47 0)
+			(uuid "ed432c0f-aba3-446c-a6f4-f20b4002b15d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DIN" input
+			(at 115.57 81.28 180)
+			(uuid "c61f457e-c6fe-4bfc-9328-854243d65d71")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DOUT" output
+			(at 152.4 81.28 0)
+			(uuid "58ca4816-7d21-4ea1-8111-f2a3ba9c1073")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GND" input
+			(at 115.57 85.09 180)
+			(uuid "5cf64a3d-4f4e-4038-8fb5-b3fa709d3bcb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VCC" input
+			(at 115.57 88.9 180)
+			(uuid "2db6cdcd-681a-4d1c-80e8-cddb5989f463")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Smart_Spinner"
+				(path "/f709486d-613a-44bb-9859-6d5f77e05693/04119e40-735f-4ba3-ac0c-fbfe989a841b"
+					(page "4")
+				)
+			)
+		)
+	)
+)
