@@ -1,0 +1,116 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "500a9f84-d59e-418d-bc4b-2142a90d742d")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 148.59 50.8)
+		(size 36.83 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9e1d736d-1cc0-48b9-a074-d6a58596bd8e")
+		(property "Sheetname" "32_APA102_20202"
+			(at 148.59 50.0884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "32_APA102_20202.kicad_sch"
+			(at 148.59 69.1646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CIN" input
+			(at 148.59 54.61 180)
+			(uuid "a7943e78-7840-4e3f-9936-b4332a36894f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "COUT" output
+			(at 185.42 54.61 0)
+			(uuid "00564977-e66f-41c0-b2e8-3140dc86e02c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DIN" input
+			(at 148.59 58.42 180)
+			(uuid "443b3fea-624f-48ac-93c9-ca62846a33f8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DOUT" output
+			(at 185.42 58.42 0)
+			(uuid "e8472d08-2f5d-4891-9da4-3639bb51a9c2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GND" input
+			(at 148.59 62.23 180)
+			(uuid "61661236-7fba-4568-a1d5-61c4db8db580")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VCC" input
+			(at 148.59 66.04 180)
+			(uuid "068a9ef9-95d3-49e8-83e7-7b2c5900d467")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "spinning"
+				(path "/500a9f84-d59e-418d-bc4b-2142a90d742d"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

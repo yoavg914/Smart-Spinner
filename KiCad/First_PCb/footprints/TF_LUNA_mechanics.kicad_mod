@@ -1,0 +1,152 @@
+(footprint "TF_LUNA_mechanics"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "TF_LUNA_mechanics"
+		(at -0.1 7.7 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "944637c1-e1ce-49ff-b31f-23328b67af4e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "TF_LUNA_mechanics"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "90d0e3cd-62fb-46e5-a66b-56ab43b61b4c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b26196ca-f9d1-4d34-8d3a-e7befdb62419")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "afcfff8b-581e-46bd-a7d4-b2cabc8e4792")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -17.85 -4.85)
+		(end -13.65 6.75)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "3d51bc21-7e75-4fa3-9d89-4a2938c866ab")
+	)
+	(fp_rect
+		(start -13.325 -6.75)
+		(end 13.325 6.75)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "98462570-fde5-4a25-86b0-cb886e14bc30")
+	)
+	(fp_rect
+		(start 13.65 -4.85)
+		(end 17.85 6.75)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "8a338963-581e-4c51-b1d9-20494791d20f")
+	)
+	(fp_rect
+		(start -17.85 -4.85)
+		(end -13.65 6.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "1bffea52-4438-4d04-984e-54d3f54a6431")
+	)
+	(fp_rect
+		(start -13.325 -6.75)
+		(end 13.325 6.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "5704e44c-9df9-4320-8913-9b007f24b5ba")
+	)
+	(fp_rect
+		(start 13.6 -4.85)
+		(end 17.9 6.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "36ca6725-417e-45b8-a57b-dee3ecfa894f")
+	)
+	(fp_text user "sensor side"
+		(at -3.7 -7.3 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "a7203f2b-d946-4cf5-8f31-0b3cb913e3f9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at -15.75 0)
+		(size 3 3)
+		(drill 3)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "90bd9e63-17bb-4008-abf3-d723423292b9")
+	)
+	(pad "" np_thru_hole circle
+		(at 15.75 0)
+		(size 3 3)
+		(drill 3)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "b59a931d-59e8-4ac5-bf89-3df41cc36da0")
+	)
+	(embedded_fonts no)
+)

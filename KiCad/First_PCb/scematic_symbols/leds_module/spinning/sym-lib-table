@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "LEDS_sym")(type "KiCad")(uri "${KIPRJMOD}/LEDS_sym.kicad_sym")(options "")(descr ""))
+  (lib (name "spinning")(type "KiCad")(uri "${KIPRJMOD}/spinning.kicad_sym")(options "")(descr ""))
+)
