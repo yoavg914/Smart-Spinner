@@ -72,7 +72,7 @@
 		(uuid "effa1341-0303-49dd-9c32-1a278b67a79b")
 	)
 	(fp_line
-		(start -2.4 4.5)
+		(start -3.2 4.5)
 		(end -11 4.5)
 		(stroke
 			(width 0.127)
@@ -83,7 +83,7 @@
 	)
 	(fp_line
 		(start 3.3 -4.5)
-		(end 3.3 -2.3)
+		(end 3.3 -2.6)
 		(stroke
 			(width 0.127)
 			(type solid)
@@ -92,7 +92,7 @@
 		(uuid "6f182c3b-2a9d-4840-99a9-a081fbce63dc")
 	)
 	(fp_line
-		(start 3.3 2.3)
+		(start 3.3 2.6)
 		(end 3.3 4.5)
 		(stroke
 			(width 0.127)
@@ -103,7 +103,7 @@
 	)
 	(fp_line
 		(start 3.3 4.5)
-		(end 2.4 4.5)
+		(end 3.1 4.5)
 		(stroke
 			(width 0.127)
 			(type solid)
@@ -206,8 +206,8 @@
 	)
 	(pad "2" thru_hole oval
 		(at 0 4.8)
-		(size 4.7 2.35)
-		(drill oval 3.5 0.8)
+		(size 5.7 2.55)
+		(drill oval 4.5 1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(solder_mask_margin 0.102)
@@ -215,8 +215,8 @@
 	)
 	(pad "3" thru_hole oval
 		(at -3.5 0)
-		(size 2 4)
-		(drill oval 0.8 3)
+		(size 2.2 5)
+		(drill oval 1 4)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(solder_mask_margin 0.102)
@@ -224,8 +224,8 @@
 	)
 	(pad "4" thru_hole oval
 		(at 2.5 0)
-		(size 2 4)
-		(drill oval 0.8 3)
+		(size 2.2 5)
+		(drill oval 1 4)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(solder_mask_margin 0.102)
