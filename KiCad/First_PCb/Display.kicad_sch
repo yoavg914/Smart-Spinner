@@ -951,16 +951,6 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 81.28) (xy 124.46 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5dc78e3e-5265-499e-b7ca-a967df60ffb0")
-	)
-	(wire
-		(pts
 			(xy 118.11 88.9) (xy 124.46 88.9)
 		)
 		(stroke
@@ -978,16 +968,6 @@
 			(type default)
 		)
 		(uuid "6a559adc-fdd5-4981-ba1e-546e3a373d11")
-	)
-	(wire
-		(pts
-			(xy 118.11 102.87) (xy 124.46 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7bc0ed20-8c93-4bc4-b279-ab17f86470f1")
 	)
 	(wire
 		(pts
@@ -1018,6 +998,26 @@
 			(type default)
 		)
 		(uuid "8ef16684-ece3-4452-aae4-dbfa1e638fb1")
+	)
+	(wire
+		(pts
+			(xy 87.63 102.87) (xy 124.46 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b520c50-6053-4f82-9ec4-36fe7f5e4d41")
+	)
+	(wire
+		(pts
+			(xy 104.14 81.28) (xy 124.46 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f50a51c-9f19-4564-8381-a9709044d1e1")
 	)
 	(wire
 		(pts
@@ -1109,29 +1109,29 @@
 		)
 		(uuid "fd699670-88c8-4dc6-a5c9-cfef576c4767")
 	)
-	(hierarchical_label "ESP_LEDS_SDI1"
-		(shape input)
-		(at 87.63 66.04 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "119a37cc-321a-4854-9f8d-486f51563bc6")
-	)
 	(hierarchical_label "ESP_LEDS_CLK"
 		(shape input)
-		(at 87.63 63.5 180)
+		(at 118.11 68.58 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "4164e89e-9c71-4fe7-863c-426552e5c554")
+		(uuid "4708167b-aee1-4923-b79f-dd8ed68881fd")
 	)
-	(hierarchical_label "ESP_LEDS_SDI3"
+	(hierarchical_label "ESP_LEDS_SDI1"
+		(shape input)
+		(at 87.63 97.79 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "744a5842-4d2c-4c03-a109-b5dc8ac6d455")
+	)
+	(hierarchical_label "ESP_LEDS_SDI2"
 		(shape input)
 		(at 87.63 100.33 180)
 		(effects
@@ -1140,29 +1140,29 @@
 			)
 			(justify right)
 		)
-		(uuid "47524ef6-e239-495e-8903-1ccf842ab534")
+		(uuid "8ca01f5d-83dd-4a30-958c-eda54c118cb1")
 	)
-	(hierarchical_label "ESP_LEDS_SDI2"
+	(hierarchical_label "ESP_2ND_PCB_GPIO23"
 		(shape input)
-		(at 87.63 83.82 180)
+		(at 118.11 88.9 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "4ee29384-4569-4707-98dc-3932ab4aa64d")
+		(uuid "98b1014b-c8c5-4459-b2d4-34ad94647d3f")
 	)
-	(hierarchical_label "ESP_2ND_PCB_GPIO4"
+	(hierarchical_label "ESP_LEDS_SDI4"
 		(shape input)
-		(at 87.63 81.28 180)
+		(at 87.63 66.04 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "755336f0-6013-4704-a454-48ddfc757d70")
+		(uuid "ad14a79d-78cb-4c92-b5a6-291757e3bb56")
 	)
 	(hierarchical_label "ESP_ST_LED2"
 		(shape input)
@@ -1175,16 +1175,16 @@
 		)
 		(uuid "ba7d76a1-920c-4f24-bd6b-46d859447c7f")
 	)
-	(hierarchical_label "ESP_LEDS_SDI4"
+	(hierarchical_label "ESP_LEDS_SDI3"
 		(shape input)
-		(at 87.63 97.79 180)
+		(at 87.63 102.87 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "ce201f58-0566-4908-b947-b40f40a3b58b")
+		(uuid "cc590b50-5146-41b9-b084-9998f55a5eb2")
 	)
 	(hierarchical_label "ESP_ST_LED1"
 		(shape input)
@@ -1266,7 +1266,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 118.11 102.87 0)
+		(at 87.63 63.5 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1274,7 +1274,7 @@
 		(dnp no)
 		(uuid "0837221d-754b-4337-88d3-400f03dff7ee")
 		(property "Reference" "#PWR022"
-			(at 118.11 106.68 0)
+			(at 87.63 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1283,7 +1283,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 114.808 102.616 0)
+			(at 84.328 63.246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1291,7 +1291,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 118.11 102.87 0)
+			(at 87.63 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1300,7 +1300,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 118.11 102.87 0)
+			(at 87.63 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1309,7 +1309,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 118.11 102.87 0)
+			(at 87.63 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1765,7 +1765,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 118.11 68.58 0)
+		(at 87.63 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1773,7 +1773,7 @@
 		(dnp no)
 		(uuid "a4efaf22-4525-45fd-baa7-0af3db13f1f4")
 		(property "Reference" "#PWR026"
-			(at 118.11 72.39 0)
+			(at 87.63 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1782,7 +1782,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 114.808 67.818 0)
+			(at 84.328 83.058 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1790,7 +1790,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 118.11 68.58 0)
+			(at 87.63 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1799,7 +1799,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 118.11 68.58 0)
+			(at 87.63 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1808,7 +1808,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 118.11 68.58 0)
+			(at 87.63 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1830,7 +1830,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 118.11 88.9 0)
+		(at 104.14 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1838,7 +1838,7 @@
 		(dnp no)
 		(uuid "ab4a0f34-2780-4a63-bacf-bdbb4c0d47a7")
 		(property "Reference" "#PWR023"
-			(at 118.11 95.25 0)
+			(at 104.14 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1847,7 +1847,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 114.808 91.44 0)
+			(at 100.838 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1855,7 +1855,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 118.11 88.9 0)
+			(at 104.14 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1864,7 +1864,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 118.11 88.9 0)
+			(at 104.14 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1873,7 +1873,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 118.11 88.9 0)
+			(at 104.14 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)

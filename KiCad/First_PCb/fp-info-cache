@@ -1,4 +1,4 @@
-25618753284119585
+25624065983004414
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -102676,6 +102676,20 @@ MT3608 Type-C USB
 4
 4
 footprints
+MT3608 Type-C USB_TH
+
+
+0
+4
+4
+footprints
+MT3608_no_conn_TH
+
+
+0
+4
+4
+footprints
 NINIGI_DC-005
 
 
@@ -102684,6 +102698,13 @@ NINIGI_DC-005
 3
 footprints
 PWR_SPLY12V
+
+
+0
+8
+8
+footprints
+PWR_SPLY12V_TH
 
 
 0

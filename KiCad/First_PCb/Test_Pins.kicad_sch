@@ -341,23 +341,13 @@
 	)
 	(text "regular GPIOS\n"
 		(exclude_from_sim no)
-		(at 146.558 89.154 0)
+		(at 146.558 96.774 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 		(uuid "6957bce9-7adf-4dcd-8d87-219588d43f78")
-	)
-	(text "Anaglog entry input pin\n\n"
-		(exclude_from_sim no)
-		(at 135.128 104.394 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "6f0fdf51-75f2-4b01-b81a-4fa948d90b44")
 	)
 	(text "Voltage TP\n\n"
 		(exclude_from_sim no)
@@ -381,7 +371,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 87.63) (xy 114.3 92.71)
+			(xy 133.35 93.98) (xy 133.35 100.33)
 		)
 		(stroke
 			(width 0)
@@ -401,17 +391,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 95.25) (xy 125.73 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4786a530-c119-4396-b00a-5de3addfac00")
-	)
-	(wire
-		(pts
-			(xy 101.6 102.87) (xy 101.6 105.41)
+			(xy 102.87 91.44) (xy 102.87 93.98)
 		)
 		(stroke
 			(width 0)
@@ -421,7 +401,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 92.71) (xy 114.3 92.71)
+			(xy 64.77 100.33) (xy 133.35 100.33)
 		)
 		(stroke
 			(width 0)
@@ -431,17 +411,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 90.17) (xy 101.6 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "85c6d413-c229-49ed-af93-5dc7e04810e8")
-	)
-	(wire
-		(pts
-			(xy 64.77 107.95) (xy 114.3 107.95)
+			(xy 64.77 96.52) (xy 118.11 96.52)
 		)
 		(stroke
 			(width 0)
@@ -481,7 +451,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 105.41) (xy 101.6 105.41)
+			(xy 64.77 93.98) (xy 102.87 93.98)
 		)
 		(stroke
 			(width 0)
@@ -511,17 +481,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 87.63) (xy 101.6 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ee582edd-3f8c-4e51-9ff4-d531d195aaa8")
-	)
-	(wire
-		(pts
-			(xy 114.3 102.87) (xy 114.3 107.95)
+			(xy 118.11 91.44) (xy 118.11 96.52)
 		)
 		(stroke
 			(width 0)
@@ -529,28 +489,8 @@
 		)
 		(uuid "f4679f00-ddd5-4622-a54c-2aaca947c7e9")
 	)
-	(wire
-		(pts
-			(xy 125.73 87.63) (xy 125.73 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe7c9d67-5fe2-4a42-bee8-da787a2d0df1")
-	)
-	(label "ESP_first_PCB_GPIO2"
-		(at 104.14 95.25 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "798dcad7-2fa2-4cb9-82eb-15b6d93916d8")
-	)
-	(label "ESP_first_PCB_GPIO35"
-		(at 92.71 107.95 0)
+	(label "ESP_TP_GPIO2"
+		(at 87.63 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -559,18 +499,8 @@
 		)
 		(uuid "8184bc28-96cb-43e4-b9e5-7fdac3eede8e")
 	)
-	(label "ESP_first_PCB_GPIO22"
-		(at 80.01 90.17 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bcbf4c48-9b50-4961-ab0c-1c91d12d7ffd")
-	)
-	(label "ESP_first_PCB_GPIO15"
-		(at 92.71 92.71 0)
+	(label "ESP_TP_GPIO15"
+		(at 92.71 100.33 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -579,8 +509,8 @@
 		)
 		(uuid "be7cd5af-96cd-4f6e-9d19-0b0127ce1c92")
 	)
-	(label "ESP_first_PCB_GPIO34"
-		(at 80.01 105.41 0)
+	(label "ESP_TP_GPIO4"
+		(at 80.01 93.98 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -589,31 +519,9 @@
 		)
 		(uuid "f039d024-f518-40ce-a776-61690aa31372")
 	)
-	(hierarchical_label "ESP_first_PCB_GPIO2"
+	(hierarchical_label "ESP_TP_GPIO15"
 		(shape input)
-		(at 64.77 95.25 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "79a40738-0a2b-40fc-98ad-7458b3ddad4f")
-	)
-	(hierarchical_label "ESP_first_PCB_GPIO35"
-		(shape input)
-		(at 64.77 107.95 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "7d158936-5950-404f-95ca-cc670159c63b")
-	)
-	(hierarchical_label "ESP_first_PCB_GPIO15"
-		(shape input)
-		(at 64.77 92.71 180)
+		(at 64.77 100.33 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -622,27 +530,27 @@
 		)
 		(uuid "83c8b2af-2f05-4770-a3e0-563d262e6c93")
 	)
-	(hierarchical_label "ESP_first_PCB_GPIO22"
+	(hierarchical_label "ESP_TP_GPIO4"
 		(shape input)
-		(at 64.77 90.17 180)
+		(at 64.77 93.98 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "b7e238b2-ee0a-4286-9405-c8d85284d955")
+		(uuid "de400c8f-ad27-479f-ac9d-8eb73a1fba14")
 	)
-	(hierarchical_label "ESP_first_PCB_GPIO34"
+	(hierarchical_label "ESP_TP_GPIO2"
 		(shape input)
-		(at 64.77 105.41 180)
+		(at 64.77 96.52 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "d9b45186-18b8-407b-b308-25ade966fedb")
+		(uuid "eaf6f38b-a483-4e73-a4c9-daed7c3e1a23")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -841,73 +749,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 101.6 87.63 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4b74a30b-388b-4c0f-be56-213e75b0f92c")
-		(property "Reference" "TP8"
-			(at 104.14 83.0579 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 104.14 85.5979 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.60mm_Drill1.4mm_Beaded"
-			(at 106.68 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 106.68 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 101.6 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1d19879b-69ce-4dcb-8c2b-63874f703e7d")
-		)
-		(instances
-			(project "first_PCB"
-				(path "/f709486d-613a-44bb-9859-6d5f77e05693/610840b2-a2bb-42b4-aead-903b8c653387"
-					(reference "TP8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
 		(at 86.36 74.93 0)
 		(unit 1)
@@ -1041,15 +882,15 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 114.3 87.63 0)
+		(at 133.35 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "5b8e41c5-0041-4281-804b-c646d55e65ad")
-		(property "Reference" "TP9"
-			(at 115.57 83.058 0)
+		(property "Reference" "TP10"
+			(at 134.62 89.408 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1058,7 +899,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 115.57 85.598 0)
+			(at 134.62 91.948 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1067,7 +908,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Loop_D2.60mm_Drill1.4mm_Beaded"
-			(at 119.38 87.63 0)
+			(at 138.43 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1076,7 +917,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 119.38 87.63 0)
+			(at 138.43 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1085,7 +926,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 114.3 87.63 0)
+			(at 133.35 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1099,7 +940,7 @@
 		(instances
 			(project "first_PCB"
 				(path "/f709486d-613a-44bb-9859-6d5f77e05693/610840b2-a2bb-42b4-aead-903b8c653387"
-					(reference "TP9")
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -1107,15 +948,15 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 114.3 102.87 0)
+		(at 118.11 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "9679054b-134b-4cca-b8e2-03f78f27187e")
-		(property "Reference" "TP12"
-			(at 115.57 98.298 0)
+		(property "Reference" "TP9"
+			(at 119.38 86.868 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1124,7 +965,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 115.57 100.838 0)
+			(at 119.38 89.408 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1133,7 +974,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Loop_D2.60mm_Drill1.4mm_Beaded"
-			(at 119.38 102.87 0)
+			(at 123.19 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1142,7 +983,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 119.38 102.87 0)
+			(at 123.19 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1151,7 +992,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 114.3 102.87 0)
+			(at 118.11 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1165,7 +1006,7 @@
 		(instances
 			(project "first_PCB"
 				(path "/f709486d-613a-44bb-9859-6d5f77e05693/610840b2-a2bb-42b4-aead-903b8c653387"
-					(reference "TP12")
+					(reference "TP9")
 					(unit 1)
 				)
 			)
@@ -1173,7 +1014,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 101.6 102.87 0)
+		(at 102.87 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1181,8 +1022,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b13e6b41-d156-4fd6-8d66-608599a7bd1f")
-		(property "Reference" "TP11"
-			(at 104.14 98.2979 0)
+		(property "Reference" "TP8"
+			(at 105.41 86.8679 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1191,7 +1032,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 104.14 100.8379 0)
+			(at 105.41 89.4079 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1200,7 +1041,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Loop_D2.60mm_Drill1.4mm_Beaded"
-			(at 106.68 102.87 0)
+			(at 107.95 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1209,7 +1050,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 106.68 102.87 0)
+			(at 107.95 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1218,7 +1059,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 101.6 102.87 0)
+			(at 102.87 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1232,7 +1073,7 @@
 		(instances
 			(project "first_PCB"
 				(path "/f709486d-613a-44bb-9859-6d5f77e05693/610840b2-a2bb-42b4-aead-903b8c653387"
-					(reference "TP11")
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -1432,73 +1273,6 @@
 			(project "first_PCB"
 				(path "/f709486d-613a-44bb-9859-6d5f77e05693/610840b2-a2bb-42b4-aead-903b8c653387"
 					(reference "#PWR030")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 125.73 87.63 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "edc88b0b-7ef5-4484-a3f8-956f18028c81")
-		(property "Reference" "TP10"
-			(at 128.27 83.0579 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 128.27 85.5979 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.60mm_Drill1.4mm_Beaded"
-			(at 130.81 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 130.81 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 125.73 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5dbd59ec-74c6-44e1-a28b-e95c06261655")
-		)
-		(instances
-			(project "first_PCB"
-				(path "/f709486d-613a-44bb-9859-6d5f77e05693/610840b2-a2bb-42b4-aead-903b8c653387"
-					(reference "TP10")
 					(unit 1)
 				)
 			)

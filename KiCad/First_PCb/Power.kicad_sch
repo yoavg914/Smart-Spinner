@@ -387,6 +387,169 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:Conn_01x02_Pin"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02_Pin"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x02_Pin_1_1"
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -747,6 +910,107 @@
 								(size 1.27 1.27)
 							)
 						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
@@ -1843,6 +2107,16 @@
 		)
 		(uuid "1790bbf5-4a9e-4b4a-98c4-aeb35d214439")
 	)
+	(text "jumper\n"
+		(exclude_from_sim no)
+		(at 215.9 73.406 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4d35b154-1f64-4c7c-9387-04f5b46c4ac3")
+	)
 	(text "Power Supply & Charger \n"
 		(exclude_from_sim no)
 		(at 133.858 63.5 0)
@@ -1879,7 +2153,13 @@
 		(at 88.9 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "562c5797-7456-4646-ae7e-49cf9eacc128")
+		(uuid "5576de29-25ce-41f4-a85b-ff12255e6aa6")
+	)
+	(junction
+		(at 217.17 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5affb3fe-0e94-4596-8030-2bd5f68cb9d0")
 	)
 	(junction
 		(at 201.93 91.44)
@@ -1891,7 +2171,7 @@
 		(at 88.9 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b438268c-1bb3-4302-9cf4-46c4fcbb6ddd")
+		(uuid "aa2d836b-9966-45a5-aa31-292a2cce5be1")
 	)
 	(junction
 		(at 168.91 83.82)
@@ -1903,7 +2183,7 @@
 		(at 201.93 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d901ad59-dd6d-475f-af18-9c9e1a120d5d")
+		(uuid "d0b1545e-b7fc-4a3c-92d3-7b9533d28b0e")
 	)
 	(junction
 		(at 129.54 97.79)
@@ -1956,6 +2236,16 @@
 			(type default)
 		)
 		(uuid "09d60ff8-eeec-4584-b53f-d0b331ed2fa0")
+	)
+	(wire
+		(pts
+			(xy 201.93 83.82) (xy 213.36 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f685ef4-613b-4b39-a912-6a0772dd6910")
 	)
 	(wire
 		(pts
@@ -2049,6 +2339,16 @@
 	)
 	(wire
 		(pts
+			(xy 217.17 83.82) (xy 220.98 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "610089be-11d3-41cf-b086-354c39648121")
+	)
+	(wire
+		(pts
 			(xy 137.16 97.79) (xy 137.16 95.25)
 		)
 		(stroke
@@ -2116,6 +2416,16 @@
 			(type default)
 		)
 		(uuid "a4712b1a-e327-41dd-a634-2d27ee42a586")
+	)
+	(wire
+		(pts
+			(xy 215.9 83.82) (xy 217.17 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2d8c90b-85ab-4fc1-a175-59ba7c4dcbd4")
 	)
 	(wire
 		(pts
@@ -2196,6 +2506,71 @@
 			(type default)
 		)
 		(uuid "fee5a8b6-33cc-4441-bfa4-e19613ec2703")
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 217.17 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "06774423-bdd6-46f3-a821-bd3016c38d39")
+		(property "Reference" "#FLG02"
+			(at 217.17 81.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 220.218 87.376 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 217.17 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 217.17 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 217.17 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "02314307-6f30-4ae5-a998-8e3f38a0a528")
+		)
+		(instances
+			(project "first_PCB"
+				(path "/f709486d-613a-44bb-9859-6d5f77e05693/6285590c-ce2a-4b4d-8f7b-9d941974f9a2"
+					(reference "#FLG02")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:+12V")
@@ -2416,7 +2791,7 @@
 				)
 			)
 		)
-		(property "Value" "MT3608 TYPE-C USB"
+		(property "Value" "MT3608 - No Connector"
 			(at 185.42 78.74 0)
 			(effects
 				(font
@@ -2424,7 +2799,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprints:MT3608 Type-C USB"
+		(property "Footprint" "footprints:MT3608_no_conn_TH"
 			(at 185.42 87.63 0)
 			(effects
 				(font
@@ -2500,7 +2875,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "footprints:PWR_SPLY12V"
+		(property "Footprint" "footprints:PWR_SPLY12V_TH"
 			(at 133.35 82.55 0)
 			(effects
 				(font
@@ -2562,7 +2937,7 @@
 	)
 	(symbol
 		(lib_id "spinning_top:Battery Holder")
-		(at 88.9 97.79 270)
+		(at 88.9 82.55 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2571,7 +2946,7 @@
 		(fields_autoplaced yes)
 		(uuid "2e07a5e4-1fc8-4680-918c-589df8d1711c")
 		(property "Reference" "BT3"
-			(at 92.71 95.8849 90)
+			(at 92.71 80.6449 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2580,7 +2955,7 @@
 			)
 		)
 		(property "Value" "Battery Holder"
-			(at 92.71 98.4249 90)
+			(at 92.71 83.1849 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2589,7 +2964,7 @@
 			)
 		)
 		(property "Footprint" "footprints:battery_holder"
-			(at 95.25 98.552 0)
+			(at 95.25 83.312 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2599,7 +2974,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 97.79 0)
+			(at 88.9 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2608,7 +2983,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 88.9 97.79 0)
+			(at 88.9 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2623,7 +2998,7 @@
 			(uuid "dca9e210-72d9-4479-8fb2-7adb9855be4d")
 		)
 		(instances
-			(project "Smart_Spinner"
+			(project "first_PCB"
 				(path "/f709486d-613a-44bb-9859-6d5f77e05693/6285590c-ce2a-4b4d-8f7b-9d941974f9a2"
 					(reference "BT3")
 					(unit 1)
@@ -2632,8 +3007,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 215.9 78.74 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "57db60d4-9690-4ba8-aed6-a14ddb59a941")
+		(property "Reference" "J6"
+			(at 214.122 86.106 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02_Pin"
+			(at 214.376 76.962 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 215.9 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 215.9 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 215.9 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "75b20f35-d28a-4a4a-a9e6-99c19df689ca")
+		)
+		(pin "1"
+			(uuid "fd596e39-f862-48fc-9fda-f3e4d0748be9")
+		)
+		(instances
+			(project "first_PCB"
+				(path "/f709486d-613a-44bb-9859-6d5f77e05693/6285590c-ce2a-4b4d-8f7b-9d941974f9a2"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+12V")
-		(at 201.93 83.82 0)
+		(at 220.98 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2642,7 +3084,7 @@
 		(fields_autoplaced yes)
 		(uuid "64021e12-776c-4428-bb65-647b969977c1")
 		(property "Reference" "#PWR04"
-			(at 201.93 87.63 0)
+			(at 220.98 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2651,7 +3093,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 201.93 78.74 0)
+			(at 220.98 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2659,7 +3101,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 201.93 83.82 0)
+			(at 220.98 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2668,7 +3110,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 201.93 83.82 0)
+			(at 220.98 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2677,7 +3119,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 201.93 83.82 0)
+			(at 220.98 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2689,7 +3131,7 @@
 			(uuid "5d8160dd-b609-45cd-9fe4-779cdcf72521")
 		)
 		(instances
-			(project "Smart_Spinner"
+			(project "first_PCB"
 				(path "/f709486d-613a-44bb-9859-6d5f77e05693/6285590c-ce2a-4b4d-8f7b-9d941974f9a2"
 					(reference "#PWR04")
 					(unit 1)
@@ -3091,7 +3533,7 @@
 	(symbol
 		(lib_name "Battery Holder_2")
 		(lib_id "spinning_top:Battery Holder")
-		(at 88.9 82.55 270)
+		(at 88.9 67.31 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3099,7 +3541,7 @@
 		(dnp no)
 		(uuid "ba7422bc-5318-4737-bd1f-8edb24d3a58b")
 		(property "Reference" "BT2"
-			(at 92.71 80.6449 90)
+			(at 92.71 65.4049 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3108,7 +3550,7 @@
 			)
 		)
 		(property "Value" "Battery Holder"
-			(at 92.202 83.312 90)
+			(at 92.202 68.072 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3117,7 +3559,7 @@
 			)
 		)
 		(property "Footprint" "footprints:battery_holder"
-			(at 95.25 83.312 0)
+			(at 95.25 68.072 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3127,7 +3569,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 82.55 0)
+			(at 88.9 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3136,7 +3578,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 88.9 82.55 0)
+			(at 88.9 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3151,7 +3593,7 @@
 			(uuid "acfd6778-f471-49ff-91a4-2e7a07eb685d")
 		)
 		(instances
-			(project "Smart_Spinner"
+			(project "first_PCB"
 				(path "/f709486d-613a-44bb-9859-6d5f77e05693/6285590c-ce2a-4b4d-8f7b-9d941974f9a2"
 					(reference "BT2")
 					(unit 1)
@@ -3162,7 +3604,7 @@
 	(symbol
 		(lib_name "Battery Holder_1")
 		(lib_id "spinning_top:Battery Holder")
-		(at 88.9 67.31 270)
+		(at 88.9 97.79 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3171,7 +3613,7 @@
 		(fields_autoplaced yes)
 		(uuid "cb7b8760-a5bc-42d5-84cf-b23c82a1bd20")
 		(property "Reference" "BT1"
-			(at 92.71 65.4049 90)
+			(at 92.71 95.8849 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3180,7 +3622,7 @@
 			)
 		)
 		(property "Value" "Battery Holder"
-			(at 92.71 67.9449 90)
+			(at 92.71 98.4249 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3189,7 +3631,7 @@
 			)
 		)
 		(property "Footprint" "footprints:battery_holder"
-			(at 83.82 67.818 0)
+			(at 83.82 98.298 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3199,7 +3641,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 67.31 0)
+			(at 88.9 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3208,7 +3650,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 88.9 67.31 0)
+			(at 88.9 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3223,7 +3665,7 @@
 			(uuid "aa0f6c24-8bd4-44b0-8c7b-de293ca28d70")
 		)
 		(instances
-			(project "Smart_Spinner"
+			(project "first_PCB"
 				(path "/f709486d-613a-44bb-9859-6d5f77e05693/6285590c-ce2a-4b4d-8f7b-9d941974f9a2"
 					(reference "BT1")
 					(unit 1)

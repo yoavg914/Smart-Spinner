@@ -943,6 +943,530 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "spinning_top:DC-005"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at -5.0943 5.5976 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "DC-005"
+				(at -5.0995 -7.6398 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "DC-005:NINIGI_DC-005"
+				(at 0.254 6.604 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Conn Dc Power Jack 2.1mm"
+				(at 1.524 8.128 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MF" "Best Inc."
+				(at 3.556 8.128 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "PACKAGE" "None"
+				(at 3.048 9.144 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "PRICE" "None"
+				(at 5.588 8.382 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Package" "DC Power Jack Best Inc."
+				(at 0.762 9.144 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Check_prices" "https://www.snapeda.com/parts/DC-005/Best+Inc./view-part/?ref=eda"
+				(at -3.048 9.398 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Price" "None"
+				(at 1.27 7.874 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "SnapEDA_Link" "https://www.snapeda.com/parts/DC-005/Best+Inc./view-part/?ref=snap"
+				(at -3.302 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MP" "DC-005"
+				(at 2.286 10.414 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Availability" "Not in stock"
+				(at 3.048 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "AVAILABILITY" "Unavailable"
+				(at 0.254 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Description_1" "6.4x14.2x9.0mm Power DC Receptacle"
+				(at -3.302 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(symbol "DC-005_0_0"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 3.81) (xy 1.27 3.81)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -3.175 1.27)
+					(mid -4.4394 2.54)
+					(end -3.175 3.81)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.905 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -2.54) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 4.445) (xy 1.27 3.81)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 3.81) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy -3.175 1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 0.635)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0.635) (xy 2.54 0.635)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 4.445) (xy 1.27 4.445)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 4.445)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 5.08 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy -0.635 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 5.08 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.032 -1.27) (xy 3.048 -1.27) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 5.08) (xy 5.08 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 2.54) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 0) (xy 5.08 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy 5.08 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -5.08) (xy -5.08 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(symbol "DC-005_1_0"
+				(pin power_out line
+					(at 10.16 2.54 180)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 10.16 -2.54 180)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "spinning_top:EGBO_UPS"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1166,8 +1690,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U1"
-				(at 0.254 -0.254 0)
+			(property "Reference" "U"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1277,7 +1801,7 @@
 						)
 					)
 				)
-				(pin power_in line
+				(pin passive line
 					(at 15.24 -3.81 180)
 					(length 2.54)
 					(name "VOUT-"
@@ -1298,6 +1822,16 @@
 			)
 			(embedded_fonts no)
 		)
+	)
+	(text "Berral conn"
+		(exclude_from_sim no)
+		(at 154.94 48.768 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "01d26e53-9665-45d5-9907-729662d49535")
 	)
 	(text "Batteries\n"
 		(exclude_from_sim no)
@@ -1336,10 +1870,16 @@
 		(uuid "0c23dda1-b608-46a0-87c4-ab0d5f5c326b")
 	)
 	(junction
+		(at 165.1 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "37f94b22-9fd2-4a7b-9069-fa361a5f8a9a")
+	)
+	(junction
 		(at 88.9 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "562c5797-7456-4646-ae7e-49cf9eacc128")
+		(uuid "5576de29-25ce-41f4-a85b-ff12255e6aa6")
 	)
 	(junction
 		(at 201.93 91.44)
@@ -1351,7 +1891,7 @@
 		(at 88.9 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b438268c-1bb3-4302-9cf4-46c4fcbb6ddd")
+		(uuid "aa2d836b-9966-45a5-aa31-292a2cce5be1")
 	)
 	(junction
 		(at 168.91 83.82)
@@ -1376,14 +1916,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fde5d060-358a-4d62-8092-c931aca129af")
-	)
-	(no_connect
-		(at 137.16 69.85)
-		(uuid "17e2d199-0845-402c-93fd-034b481b61b8")
-	)
-	(no_connect
-		(at 129.54 69.85)
-		(uuid "97cc29dc-19de-4324-af2b-e1b5758a6498")
 	)
 	(wire
 		(pts
@@ -1417,6 +1949,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 59.69) (xy 167.64 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09d60ff8-eeec-4584-b53f-d0b331ed2fa0")
+	)
+	(wire
+		(pts
 			(xy 101.6 83.82) (xy 124.46 83.82)
 		)
 		(stroke
@@ -1437,6 +1979,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 62.23) (xy 165.1 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "238cba95-c137-426c-acf5-c92d35f05244")
+	)
+	(wire
+		(pts
 			(xy 168.91 91.44) (xy 170.18 91.44)
 		)
 		(stroke
@@ -1444,6 +1996,16 @@
 			(type default)
 		)
 		(uuid "35fca408-1acb-4c80-97e5-4d8ab9dd1011")
+	)
+	(wire
+		(pts
+			(xy 129.54 68.58) (xy 129.54 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "405229a4-bbf5-481f-bd06-61c13396621f")
 	)
 	(wire
 		(pts
@@ -1464,6 +2026,16 @@
 			(type default)
 		)
 		(uuid "52a68b4f-bbe0-4876-a4d8-21703cbee1da")
+	)
+	(wire
+		(pts
+			(xy 165.1 64.77) (xy 165.1 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "556ae20c-2e56-4bf8-bb55-56e1b6f0535c")
 	)
 	(wire
 		(pts
@@ -1507,6 +2079,16 @@
 	)
 	(wire
 		(pts
+			(xy 167.64 59.69) (xy 167.64 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "864e43ef-42e6-493a-a8c4-a4f0733ec024")
+	)
+	(wire
+		(pts
 			(xy 118.11 78.74) (xy 124.46 78.74)
 		)
 		(stroke
@@ -1514,6 +2096,16 @@
 			(type default)
 		)
 		(uuid "9457bae1-5c1c-48b4-ae6f-be3cbe53c36a")
+	)
+	(wire
+		(pts
+			(xy 165.1 68.58) (xy 129.54 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f0ba108-c283-4908-8579-5daebd5ff37b")
 	)
 	(wire
 		(pts
@@ -1574,6 +2166,16 @@
 			(type default)
 		)
 		(uuid "d2bb9eaa-d5d7-45db-8afa-5b877f772fb4")
+	)
+	(wire
+		(pts
+			(xy 167.64 69.85) (xy 137.16 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d524b5ad-16b4-4db3-bcb5-e97b2ae4af47")
 	)
 	(wire
 		(pts
@@ -1755,7 +2357,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T_HandSolder"
 			(at 202.8952 91.44 0)
 			(effects
 				(font
@@ -1822,7 +2424,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:MT3608 Type-C USB"
 			(at 185.42 87.63 0)
 			(effects
 				(font
@@ -1898,7 +2500,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:PWR_SPLY12V"
 			(at 133.35 82.55 0)
 			(effects
 				(font
@@ -1960,7 +2562,7 @@
 	)
 	(symbol
 		(lib_id "spinning_top:Battery Holder")
-		(at 88.9 97.79 270)
+		(at 88.9 82.55 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1969,7 +2571,7 @@
 		(fields_autoplaced yes)
 		(uuid "2e07a5e4-1fc8-4680-918c-589df8d1711c")
 		(property "Reference" "BT3"
-			(at 92.71 95.8849 90)
+			(at 92.71 80.6449 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1978,7 +2580,7 @@
 			)
 		)
 		(property "Value" "Battery Holder"
-			(at 92.71 98.4249 90)
+			(at 92.71 83.1849 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1987,7 +2589,7 @@
 			)
 		)
 		(property "Footprint" "footprints:battery_holder"
-			(at 95.25 98.552 0)
+			(at 95.25 83.312 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1997,7 +2599,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 97.79 0)
+			(at 88.9 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2006,7 +2608,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 88.9 97.79 0)
+			(at 88.9 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2021,7 +2623,7 @@
 			(uuid "dca9e210-72d9-4479-8fb2-7adb9855be4d")
 		)
 		(instances
-			(project "Smart_Spinner"
+			(project "first_PCB"
 				(path "/f709486d-613a-44bb-9859-6d5f77e05693/6285590c-ce2a-4b4d-8f7b-9d941974f9a2"
 					(reference "BT3")
 					(unit 1)
@@ -2228,6 +2830,198 @@
 		)
 	)
 	(symbol
+		(lib_id "spinning_top:DC-005")
+		(at 154.94 62.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9eb5e0f7-7b30-4950-8c2d-40bad4a36346")
+		(property "Reference" "J5"
+			(at 154.94 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DC-005"
+			(at 154.94 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "footprints:NINIGI_DC-005"
+			(at 155.194 55.626 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Conn Dc Power Jack 2.1mm"
+			(at 156.464 54.102 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Best Inc."
+			(at 158.496 54.102 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "DESCRIPTION" "Conn Dc Power Jack 2.1mm"
+			(at 154.94 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PACKAGE" "None"
+			(at 157.988 53.086 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PRICE" "None"
+			(at 160.528 53.848 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "DC Power Jack Best Inc."
+			(at 155.702 53.086 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/DC-005/Best+Inc./view-part/?ref=eda"
+			(at 151.892 52.832 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 156.21 54.356 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/DC-005/Best+Inc./view-part/?ref=snap"
+			(at 151.638 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "DC-005"
+			(at 157.226 51.816 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "Not in stock"
+			(at 157.988 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "AVAILABILITY" "Unavailable"
+			(at 155.194 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "6.4x14.2x9.0mm Power DC Receptacle"
+			(at 151.638 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "2c57a14b-3a66-4566-adb5-a3b5dac74cab")
+		)
+		(pin "2"
+			(uuid "93b270a0-aa3f-449d-a292-dfad88c93a81")
+		)
+		(pin "3"
+			(uuid "266c7dfa-baf9-461c-81b9-cde1b0d6903c")
+		)
+		(instances
+			(project ""
+				(path "/f709486d-613a-44bb-9859-6d5f77e05693/6285590c-ce2a-4b4d-8f7b-9d941974f9a2"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 133.35 97.79 90)
 		(unit 1)
@@ -2252,7 +3046,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C_HandSolder"
 			(at 137.16 96.8248 0)
 			(effects
 				(font
@@ -2297,7 +3091,7 @@
 	(symbol
 		(lib_name "Battery Holder_2")
 		(lib_id "spinning_top:Battery Holder")
-		(at 88.9 82.55 270)
+		(at 88.9 67.31 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2305,7 +3099,7 @@
 		(dnp no)
 		(uuid "ba7422bc-5318-4737-bd1f-8edb24d3a58b")
 		(property "Reference" "BT2"
-			(at 92.71 80.6449 90)
+			(at 92.71 65.4049 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2314,7 +3108,7 @@
 			)
 		)
 		(property "Value" "Battery Holder"
-			(at 92.202 83.312 90)
+			(at 92.202 68.072 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2323,7 +3117,7 @@
 			)
 		)
 		(property "Footprint" "footprints:battery_holder"
-			(at 95.25 83.312 0)
+			(at 95.25 68.072 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2333,7 +3127,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 82.55 0)
+			(at 88.9 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2342,7 +3136,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 88.9 82.55 0)
+			(at 88.9 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2357,7 +3151,7 @@
 			(uuid "acfd6778-f471-49ff-91a4-2e7a07eb685d")
 		)
 		(instances
-			(project "Smart_Spinner"
+			(project "first_PCB"
 				(path "/f709486d-613a-44bb-9859-6d5f77e05693/6285590c-ce2a-4b4d-8f7b-9d941974f9a2"
 					(reference "BT2")
 					(unit 1)
@@ -2368,7 +3162,7 @@
 	(symbol
 		(lib_name "Battery Holder_1")
 		(lib_id "spinning_top:Battery Holder")
-		(at 88.9 67.31 270)
+		(at 88.9 97.79 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2377,7 +3171,7 @@
 		(fields_autoplaced yes)
 		(uuid "cb7b8760-a5bc-42d5-84cf-b23c82a1bd20")
 		(property "Reference" "BT1"
-			(at 92.71 65.4049 90)
+			(at 92.71 95.8849 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2386,7 +3180,7 @@
 			)
 		)
 		(property "Value" "Battery Holder"
-			(at 92.71 67.9449 90)
+			(at 92.71 98.4249 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2395,7 +3189,7 @@
 			)
 		)
 		(property "Footprint" "footprints:battery_holder"
-			(at 83.82 67.818 0)
+			(at 83.82 98.298 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2405,7 +3199,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 67.31 0)
+			(at 88.9 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2414,7 +3208,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 88.9 67.31 0)
+			(at 88.9 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2429,7 +3223,7 @@
 			(uuid "aa0f6c24-8bd4-44b0-8c7b-de293ca28d70")
 		)
 		(instances
-			(project "Smart_Spinner"
+			(project "first_PCB"
 				(path "/f709486d-613a-44bb-9859-6d5f77e05693/6285590c-ce2a-4b4d-8f7b-9d941974f9a2"
 					(reference "BT1")
 					(unit 1)
@@ -2464,7 +3258,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-6032-28_Kemet-C_HandSolder"
 			(at 169.8752 91.44 0)
 			(effects
 				(font

@@ -17,16 +17,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 140.97) (xy 195.58 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "08ca77fd-11aa-453c-95b9-dfa32a21a94d")
-	)
-	(wire
-		(pts
 			(xy 26.67 49.53) (xy 26.67 81.28)
 		)
 		(stroke
@@ -137,16 +127,6 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 144.78) (xy 193.04 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "45a08549-3825-478a-adff-328b1b5edd23")
-	)
-	(wire
-		(pts
 			(xy 172.72 106.68) (xy 203.2 106.68)
 		)
 		(stroke
@@ -154,16 +134,6 @@
 			(type default)
 		)
 		(uuid "5247767a-1723-4e85-b4cc-56d4a86d55ac")
-	)
-	(wire
-		(pts
-			(xy 214.63 144.78) (xy 193.04 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5feefe09-291c-4317-b71c-3030149a5309")
 	)
 	(wire
 		(pts
@@ -214,16 +184,6 @@
 			(type default)
 		)
 		(uuid "78b8d52a-71bf-4697-9d58-67d281936680")
-	)
-	(wire
-		(pts
-			(xy 172.72 121.92) (xy 193.04 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d4fd414-b2fb-4ef2-8fc5-501238a45eed")
 	)
 	(wire
 		(pts
@@ -307,16 +267,6 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 140.97) (xy 195.58 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9dc549aa-6bf9-488f-b942-e58ec9db1fc4")
-	)
-	(wire
-		(pts
 			(xy 24.13 85.09) (xy 33.02 85.09)
 		)
 		(stroke
@@ -334,16 +284,6 @@
 			(type default)
 		)
 		(uuid "a07f4f75-9078-497b-b725-9bc9a7ece23d")
-	)
-	(wire
-		(pts
-			(xy 172.72 118.11) (xy 195.58 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a3bbe186-106e-4f81-81c7-f9bb32122f24")
 	)
 	(wire
 		(pts
@@ -499,7 +439,7 @@
 				(justify left top)
 			)
 		)
-		(pin "ESP_2ND_PCB_GPIO4" input
+		(pin "ESP_2ND_PCB_GPIO23" input
 			(at 215.9 96.52 180)
 			(uuid "0dfbd8ac-10f1-41b3-ae0e-628cf7e64ffa")
 			(effects
@@ -621,7 +561,7 @@
 				(justify left top)
 			)
 		)
-		(pin "ESP_first_PCB_GPIO2" input
+		(pin "ESP_TP_GPIO2" input
 			(at 214.63 137.16 180)
 			(uuid "de2a993b-df8d-4cb5-977a-e8bd77de2919")
 			(effects
@@ -631,7 +571,7 @@
 				(justify left)
 			)
 		)
-		(pin "ESP_first_PCB_GPIO15" input
+		(pin "ESP_TP_GPIO15" input
 			(at 214.63 133.35 180)
 			(uuid "ae11354b-3f8f-4c27-b9c6-078b649fffeb")
 			(effects
@@ -641,29 +581,9 @@
 				(justify left)
 			)
 		)
-		(pin "ESP_first_PCB_GPIO22" input
+		(pin "ESP_TP_GPIO4" input
 			(at 214.63 129.54 180)
 			(uuid "7bb7f346-f08e-494c-89fc-b401dddbc8fd")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "ESP_first_PCB_GPIO34" input
-			(at 214.63 140.97 180)
-			(uuid "62be7626-4f90-4ec3-b143-d66e2909c563")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "ESP_first_PCB_GPIO35" input
-			(at 214.63 144.78 180)
-			(uuid "1bfa2fbb-edbd-495c-bf8d-5985c6668ce9")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -867,7 +787,7 @@
 				(justify left top)
 			)
 		)
-		(pin "ESP_2ND_PCB_GPIO4" output
+		(pin "ESP_2ND_PCB_GPIO23" output
 			(at 172.72 96.52 0)
 			(uuid "cd4944fa-ef0d-441e-aea8-894c6b7ad492")
 			(effects
@@ -887,7 +807,7 @@
 				(justify right)
 			)
 		)
-		(pin "ESP_first_PCB_GPIO22" output
+		(pin "ESP_TP_GPIO4" output
 			(at 172.72 106.68 0)
 			(uuid "150959ee-891d-4f05-b6fd-793bb72430c8")
 			(effects
@@ -1017,7 +937,7 @@
 				(justify left)
 			)
 		)
-		(pin "ESP_first_PCB_GPIO2" output
+		(pin "ESP_TP_GPIO2" output
 			(at 172.72 114.3 0)
 			(uuid "8968ce70-3a2a-48c3-a024-73f6f73344bb")
 			(effects
@@ -1027,29 +947,9 @@
 				(justify right)
 			)
 		)
-		(pin "ESP_first_PCB_GPIO15" output
+		(pin "ESP_TP_GPIO15" output
 			(at 172.72 110.49 0)
 			(uuid "b2e01c5b-aaf4-4a36-b2a1-1c092ee64088")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "ESP_first_PCB_GPIO34" output
-			(at 172.72 118.11 0)
-			(uuid "598260be-f18e-479c-aeec-058dd29fb757")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "ESP_first_PCB_GPIO35" output
-			(at 172.72 121.92 0)
-			(uuid "8800a783-eae9-4331-a2c2-4a0c63b58584")
 			(effects
 				(font
 					(size 1.27 1.27)
