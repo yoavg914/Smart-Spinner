@@ -666,6 +666,10 @@
 		(uuid "6e5a9ab6-9ac0-43b4-9a89-05537e2693de")
 	)
 	(no_connect
+		(at 251.46 64.77)
+		(uuid "3737e6b8-25d9-41f3-b222-68c50a4799d4")
+	)
+	(no_connect
 		(at 251.46 67.31)
 		(uuid "5d085d63-ec09-4165-bde7-bec9e7591d15")
 	)
@@ -698,16 +702,6 @@
 			(type default)
 		)
 		(uuid "07834fc2-b313-4d76-9f30-88982e23a429")
-	)
-	(wire
-		(pts
-			(xy 251.46 64.77) (xy 257.81 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d63a21c-e110-4962-be42-28e349b539bb")
 	)
 	(wire
 		(pts
@@ -909,17 +903,6 @@
 		)
 		(uuid "e2b5a378-a491-47ab-a05d-19534496c604")
 	)
-	(hierarchical_label "SDO1"
-		(shape output)
-		(at 257.81 64.77 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "afa06a36-f55d-4d69-be62-268f873bf735")
-	)
 	(hierarchical_label "CKI"
 		(shape input)
 		(at 29.21 67.31 180)
@@ -1102,7 +1085,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED-APA102-2020"
+		(property "Footprint" "Spinning_FP:LED-APA102-2020_EDITED"
 			(at 177.8 74.93 0)
 			(effects
 				(font
@@ -1582,7 +1565,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED-APA102-2020"
+		(property "Footprint" "Spinning_FP:LED-APA102-2020_EDITED"
 			(at 245.11 74.93 0)
 			(effects
 				(font
@@ -1666,7 +1649,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED-APA102-2020"
+		(property "Footprint" "Spinning_FP:LED-APA102-2020_EDITED"
 			(at 43.18 74.93 0)
 			(effects
 				(font
@@ -1882,7 +1865,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED-APA102-2020"
+		(property "Footprint" "Spinning_FP:LED-APA102-2020_EDITED"
 			(at 133.35 74.93 0)
 			(effects
 				(font
@@ -1966,7 +1949,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED-APA102-2020"
+		(property "Footprint" "Spinning_FP:LED-APA102-2020_EDITED"
 			(at 154.94 74.93 0)
 			(effects
 				(font
@@ -2384,7 +2367,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED-APA102-2020"
+		(property "Footprint" "Spinning_FP:LED-APA102-2020_EDITED"
 			(at 222.25 74.93 0)
 			(effects
 				(font
@@ -2468,7 +2451,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED-APA102-2020"
+		(property "Footprint" "Spinning_FP:LED-APA102-2020_EDITED"
 			(at 66.04 74.93 0)
 			(effects
 				(font
@@ -2552,7 +2535,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED-APA102-2020"
+		(property "Footprint" "Spinning_FP:LED-APA102-2020_EDITED"
 			(at 87.63 74.93 0)
 			(effects
 				(font
@@ -2768,7 +2751,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED-APA102-2020"
+		(property "Footprint" "Spinning_FP:LED-APA102-2020_EDITED"
 			(at 110.49 74.93 0)
 			(effects
 				(font
@@ -3194,7 +3177,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED-APA102-2020"
+		(property "Footprint" "Spinning_FP:LED-APA102-2020_EDITED"
 			(at 200.66 74.93 0)
 			(effects
 				(font

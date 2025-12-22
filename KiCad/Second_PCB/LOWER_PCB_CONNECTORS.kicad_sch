@@ -729,16 +729,6 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 71.12) (xy 148.59 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2381f761-4155-42aa-8a77-91f2179bdf58")
-	)
-	(wire
-		(pts
 			(xy 114.3 76.2) (xy 121.92 76.2)
 		)
 		(stroke
@@ -749,7 +739,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 78.74) (xy 121.92 78.74)
+			(xy 114.3 78.74) (xy 139.7 78.74)
 		)
 		(stroke
 			(width 0)
@@ -759,17 +749,17 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 73.66) (xy 148.59 73.66)
+			(xy 114.3 73.66) (xy 139.7 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9c4e5f34-6058-4b28-9b33-a85242ebcecf")
+		(uuid "99817501-72ec-42a5-9974-f764828ae4f7")
 	)
 	(wire
 		(pts
-			(xy 114.3 96.52) (xy 121.92 96.52)
+			(xy 114.3 96.52) (xy 148.59 96.52)
 		)
 		(stroke
 			(width 0)
@@ -799,7 +789,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 53.34) (xy 148.59 53.34)
+			(xy 114.3 53.34) (xy 147.32 53.34)
 		)
 		(stroke
 			(width 0)
@@ -809,7 +799,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 50.8) (xy 148.59 50.8)
+			(xy 114.3 50.8) (xy 147.32 50.8)
 		)
 		(stroke
 			(width 0)
@@ -839,7 +829,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 55.88) (xy 121.92 55.88)
+			(xy 114.3 55.88) (xy 147.32 55.88)
 		)
 		(stroke
 			(width 0)
@@ -847,7 +837,39 @@
 		)
 		(uuid "e99930a0-0828-42dd-a85c-ef96ecbae622")
 	)
-	(hierarchical_label "ESP_LEDS_SDI3"
+	(wire
+		(pts
+			(xy 114.3 71.12) (xy 133.35 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff7f7d2b-fadb-48df-828d-5af60a7a0558")
+	)
+	(hierarchical_label "ESP_LEDS_SDI4"
+		(shape output)
+		(at 147.32 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0ae3b58d-0eca-4d98-8da5-9dd44fa0f44d")
+	)
+	(hierarchical_label "ESP_LEDS_CLK"
+		(shape output)
+		(at 147.32 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2bc97d40-8752-4b00-9dee-2a1600305850")
+	)
+	(hierarchical_label "ESP_LEDS_SDI2"
 		(shape output)
 		(at 148.59 93.98 0)
 		(effects
@@ -856,53 +878,9 @@
 			)
 			(justify left)
 		)
-		(uuid "12439af2-e87a-4dbb-a529-0decc2617c7b")
-	)
-	(hierarchical_label "ESP_LEDS_SDI2"
-		(shape output)
-		(at 148.59 73.66 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "618951a0-9334-41b6-8cbd-e4a177dde27e")
+		(uuid "76a22408-2d40-46e1-afea-b444f7e2591a")
 	)
 	(hierarchical_label "ESP_LEDS_SDI1"
-		(shape output)
-		(at 148.59 53.34 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "6497d16a-7770-4396-add5-047d722cdc3f")
-	)
-	(hierarchical_label "ESP_LEDS_CLK"
-		(shape output)
-		(at 148.59 50.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a778f198-203c-43dc-a642-c9b2c6791604")
-	)
-	(hierarchical_label "ESP_2ND_PCB_GPIO4"
-		(shape output)
-		(at 148.59 71.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "bd392d1b-6fe4-4958-8f2f-b54dce534101")
-	)
-	(hierarchical_label "ESP_LEDS_SDI4"
 		(shape output)
 		(at 148.59 91.44 0)
 		(effects
@@ -911,7 +889,29 @@
 			)
 			(justify left)
 		)
-		(uuid "ff9f6b9a-7d69-4454-abd3-f419d057ec34")
+		(uuid "861e7eb3-6ffd-4575-90dc-a3c4dd323179")
+	)
+	(hierarchical_label "ESP_2ND_PCB_GPIO4"
+		(shape output)
+		(at 139.7 78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b3680fbb-c7f1-4368-9e27-639e8c554134")
+	)
+	(hierarchical_label "ESP_LEDS_SDI3"
+		(shape output)
+		(at 148.59 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c7d08fdd-3348-4297-ad04-218d93e1475f")
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Pin")
@@ -939,7 +939,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
 			(at 109.22 73.66 0)
 			(effects
 				(font
@@ -1144,7 +1144,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
 			(at 109.22 93.98 0)
 			(effects
 				(font
@@ -1218,7 +1218,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
 			(at 109.22 53.34 0)
 			(effects
 				(font
@@ -1268,7 +1268,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 121.92 55.88 0)
+		(at 139.7 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1276,7 +1276,7 @@
 		(dnp no)
 		(uuid "70473923-9f9a-42ee-8115-b45c11075041")
 		(property "Reference" "#PWR085"
-			(at 121.92 59.69 0)
+			(at 139.7 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1285,7 +1285,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 125.222 55.372 0)
+			(at 143.002 73.152 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1293,7 +1293,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 121.92 55.88 0)
+			(at 139.7 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1302,7 +1302,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 55.88 0)
+			(at 139.7 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1311,7 +1311,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 121.92 55.88 0)
+			(at 139.7 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1323,7 +1323,7 @@
 			(uuid "bb9c8e9b-022d-456e-8389-7d76526aa1be")
 		)
 		(instances
-			(project ""
+			(project "2ND_PCB"
 				(path "/500a9f84-d59e-418d-bc4b-2142a90d742d/cfbbf487-0da7-4357-bd55-3c8e5524ea6e"
 					(reference "#PWR085")
 					(unit 1)
@@ -1333,7 +1333,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 121.92 78.74 0)
+		(at 133.35 71.12 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1342,7 +1342,7 @@
 		(fields_autoplaced yes)
 		(uuid "7d61debe-5261-41d7-b53a-00bdeaacb464")
 		(property "Reference" "#PWR012"
-			(at 121.92 85.09 0)
+			(at 133.35 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1351,7 +1351,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 121.92 83.82 0)
+			(at 133.35 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1359,7 +1359,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 121.92 78.74 0)
+			(at 133.35 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1368,7 +1368,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 78.74 0)
+			(at 133.35 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1377,7 +1377,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 121.92 78.74 0)
+			(at 133.35 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1399,7 +1399,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 121.92 96.52 0)
+		(at 147.32 50.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1407,7 +1407,7 @@
 		(dnp no)
 		(uuid "f12cdb7e-132d-41c0-8e24-07add562d931")
 		(property "Reference" "#PWR084"
-			(at 121.92 100.33 0)
+			(at 147.32 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1416,7 +1416,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 125.222 96.012 0)
+			(at 150.622 50.292 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1424,7 +1424,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 121.92 96.52 0)
+			(at 147.32 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1433,7 +1433,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 96.52 0)
+			(at 147.32 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1442,7 +1442,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 121.92 96.52 0)
+			(at 147.32 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1454,7 +1454,7 @@
 			(uuid "ea966570-bbf2-4fe4-a28d-eec266ae2256")
 		)
 		(instances
-			(project ""
+			(project "2ND_PCB"
 				(path "/500a9f84-d59e-418d-bc4b-2142a90d742d/cfbbf487-0da7-4357-bd55-3c8e5524ea6e"
 					(reference "#PWR084")
 					(unit 1)

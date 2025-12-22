@@ -1,4 +1,4 @@
-25601103207409647
+25606408567881303
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -94402,6 +94402,20 @@ JST_GH125
 6
 6
 Spinning_FP
+LED-APA102-2020_EDITED
+http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf
+LED RGB SPI
+0
+8
+6
+Spinning_FP
+MT3608
+
+
+0
+4
+4
+Spinning_FP
 PWR_SPLY12V
 
 
@@ -94415,6 +94429,13 @@ Surface mounted pin header SMD 1x04 2.54mm single row style1 pin1 left
 0
 4
 4
+Spinning_FP
+TF_LUNA_mechanics
+
+
+0
+0
+0
 Symbol
 CE-Logo_8.5x6mm_SilkScreen
 CE marking
