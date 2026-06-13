@@ -16,12 +16,15 @@ SPIClass spi(HSPI);
 SPISettings spiCfg(SPI_CLK, MSBFIRST, SPI_MODE3);
 
 // ===== LSM6DSV registers =====
+#define CTRL1_XL     0x10
 #define CTRL2_G      0x11
 #define CTRL3_C      0x12
 #define CTRL6_G      0x15
 #define OUTX_L_G     0x22
+#define OUTX_L_A     0x28
 
 static constexpr float GYRO_SENS_DPS_PER_LSB = 0.07f;
+static constexpr float ACCEL_SENS_G_PER_LSB = 0.000061f;
 
 static uint8_t read_reg(uint8_t reg) {
   spi.beginTransaction(spiCfg);
@@ -53,6 +56,7 @@ void jyro_init() {
   spi.begin(SCK, MISO, MOSI, CS);
 
   write_reg(CTRL3_C, 0x04); // IF_INC=1
+  write_reg(CTRL1_XL, 0x05); // ODR=60 Hz, FS=±2g
   write_reg(CTRL2_G, 0x05); // ODR=60 Hz (your working value)
   write_reg(CTRL6_G, 0x04); // FS=±2000 dps
 
@@ -95,4 +99,25 @@ float jyro_get_wobble_dps() {
 
 float jyro_spin_dps_to_rpm(float spin_dps) {
   return (spin_dps / 360.0f) * 60.0f;
+}
+
+void jyro_read_xyz_g(float &ax_g, float &ay_g, float &az_g) {
+  uint8_t b[6];
+
+  spi.beginTransaction(spiCfg);
+  digitalWrite(CS, LOW);
+
+  spi.transfer(OUTX_L_A | 0x80);
+  for (int i = 0; i < 6; i++) b[i] = spi.transfer(0);
+
+  digitalWrite(CS, HIGH);
+  spi.endTransaction();
+
+  int16_t ax_raw = (int16_t)((b[1] << 8) | b[0]);
+  int16_t ay_raw = (int16_t)((b[3] << 8) | b[2]);
+  int16_t az_raw = (int16_t)((b[5] << 8) | b[4]);
+
+  ax_g = ax_raw * ACCEL_SENS_G_PER_LSB;
+  ay_g = ay_raw * ACCEL_SENS_G_PER_LSB;
+  az_g = az_raw * ACCEL_SENS_G_PER_LSB;
 }

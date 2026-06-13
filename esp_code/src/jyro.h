@@ -5,6 +5,7 @@
 
 void jyro_init();
 void jyro_read_xyz_dps(float &gx_dps, float &gy_dps, float &gz_dps);
+void jyro_read_xyz_g(float &ax_g, float &ay_g, float &az_g);
 
 float jyro_get_spin_dps();
 float jyro_get_wobble_dps();

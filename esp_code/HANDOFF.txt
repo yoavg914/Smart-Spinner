@@ -1,0 +1,252 @@
+==================================================================
+HANDOFF NOTES - Spinning Top POV Display - Heading/Zero-crossing bug
+Written: 2026-06-12 (continue tomorrow with a fresh agent)
+==================================================================
+
+PROJECT OVERVIEW
+----------------
+This is a spinning-top toy with a ring of addressable LEDs (APA102/DotStar)
+arranged in 4 "arms" that, due to persistence of vision (POV) as the top
+spins, render readable text/words in the air.
+
+Hardware:
+- ESP32 (board=esp32dev, PlatformIO, framework=arduino)
+- LSM6DSV-family IMU read over SPI (src/jyro.cpp / jyro.h) - gives gyro
+  (deg/s) used to integrate heading ("theta_deg"), plus accel/wobble.
+- A "Luna" LIDAR distance sensor (TF-Luna style, src/luna.cpp / luna.h)
+  read over UART at 250 Hz (LUNA_FRAME_RATE_HZ=250, ~4ms/sample),
+  outputs distance in mm.
+- LED ring: LED_ARM_COUNT=4 arms, LEDS_PER_ARM=10 -> LED_COUNT=40.
+  4 separate SDI data lines (pins 25,26,27,14), shared clock (pin 13).
+  ARM_ZERO_INDEX=3. WORD_W=36 columns, WORD_COL_DEG=4 deg/column ->
+  144 deg wide "active word window". WORD_H=7 rows, WORD_FLIP_ROWS=true,
+  WORD_ANGLE_OFFSET_DEG=0.0f.
+- BLE GATT used for control/telemetry/logs (untouched this whole session).
+  debug_print_ble() forwards short strings (<=60 chars) to a BLE log view
+  the user reads on their phone (the "Logs" tab in their BLE app).
+
+THE PHYSICAL SETUP (IMPORTANT, CONFIRMED BY USER)
+--------------------------------------------------
+- There is exactly ONE reference object near the spinner: a single water
+  bottle. User confirmed explicitly: "there is no second object - just 1
+  water bottle next to the spinner... theres nothing closer or as close to
+  it than the water bottle."
+- The LIDAR is mounted on the spinning top and sweeps around; once per
+  revolution it should pass close to the water bottle, producing one
+  "near" reading (distance dips below LUNA_NEAR_THRESHOLD_MM=200mm). This
+  "near" event is used to define theta=0 (the "zero object" / compass
+  reference) so the rendered word stays anchored near the bottle's
+  location regardless of spin.
+- Goal: the rendered word should stay STABLE/READABLE near the bottle as
+  the top spins - no jitter, jumping, drift, disappearing, or duplication.
+
+THE BUG / SYMPTOM (USER-REPORTED, STILL UNRESOLVED)
+----------------------------------------------------
+User sees "2 copies of the word" appear simultaneously (described at one
+point as "2 halves, 180 degrees apart", later clarified as "more like 2
+copies of the word" - i.e. the whole word appears to render in two
+different angular positions).
+
+PROVEN GEOMETRIC FACT (still true, do not re-derive)
+------------------------------------------------------
+For a single heading value, the 4 arms' angular positions
+(arm_heading = fmod(heading + (arm-ARM_ZERO_INDEX)*90, 360)) are spaced
+90 degrees apart and cover all of [0,360). Given the 144-degree-wide
+active word window, only ADJACENT arm pairs (90 degrees apart) can ever
+be simultaneously active from ONE heading value - opposite arms (180
+degrees apart) CANNOT both be active from a single heading. CONCLUSION:
+any "duplicate word" symptom must come from theta_deg/heading itself
+taking on two different values across loop iterations/revolutions
+(blended together by POV persistence in the human eye), NOT from a bug
+in the rendering math (set_word_columns_all) itself. This was proven by
+direct algebra and should be considered settled.
+
+HEADING / ZERO-CROSSING PIPELINE (current state of code)
+-----------------------------------------------------------
+1. theta_deg is integrated continuously from gyro z-rate (gz_corr),
+   wrapped to [0,360), NEVER hard-reset during normal operation.
+2. luna_update_zero() (src/luna.cpp) runs a near/far state machine on the
+   LIDAR distance stream:
+     - near_th_mm=200, far_th_mm=900 (src/luna.h)
+     - hits_needed=2 consecutive near readings to fire a zero-crossing
+     - fars_needed=2 consecutive far readings to "re-arm" before the next
+       zero can fire
+     - FIXED THIS SESSION: previously, readings strictly BETWEEN the near
+       and far thresholds (the "dead zone") did not reset the near/far hit
+       counters, allowing non-consecutive near/far readings (separated by
+       dead-zone noise) to spuriously satisfy hits_needed/fars_needed. Now
+       the dead zone resets both counters to 0, requiring truly consecutive
+       readings. This build succeeded but did NOT fix the "2 copies"
+       symptom.
+3. When luna_update_zero() returns true ("ZERO SET" / zero-crossing
+   detected), src/main.cpp (~line 1020-1075):
+     - Computes a time-based debounce gate ADDED THIS SESSION:
+       ZERO_MIN_PERIOD_FRACTION = 0.6. Rejects ("ZERO IGNORED (too soon)")
+       any zero-crossing arriving sooner than 0.6 * expected_period_us
+       after the last ACCEPTED one, where expected_period_us is computed
+       from the CURRENT gyro spin rate: (360/spin_dps_abs)*1e6.
+       RESULT: this gate had almost no effect - only ~2 "ZERO IGNORED"
+       lines appeared across a whole log, while ~2 ZERO SET events per
+       revolution continued.
+     - error_deg = theta_deg wrapped to [-180,180] (this is how far theta
+       has drifted from the expected 0/360 at the zero-crossing).
+     - DIAGNOSTIC PRINT ADDED THIS SESSION (currently in code, built &
+       working): "ZERO SET theta=%.1f err=%.1f per_ms=%.1f" where per_ms
+       is zero_period_us (time since the last ACCEPTED zero-crossing) in
+       milliseconds. This lets us compare LIDAR-measured revolution
+       period against the gyro-derived period (1000/rps, where rps is
+       printed in the regular telemetry line).
+     - If !have_period or |error_deg| > HEADING_SNAP_THRESHOLD_DEG (30
+       deg): SNAP - theta_deg is forced to 0.0 instantly (visible as an
+       abrupt jump in the rendered word).
+     - Else: SLEW - theta_deg is gradually corrected toward 0 over
+       HEADING_SLEW_DURATION_US = 80000 (80ms), via slew_correction_dps.
+4. Additional diagnostic (added previous session, still present): "MISSED
+   ZERO (revolution overdue)" warning, printed once if more than
+   1.5 * zero_period_us elapses since the last accepted zero without a
+   new one.
+
+HYPOTHESES TESTED AND THEIR STATUS
+-------------------------------------
+1. [BUSTED via math] "Rendering math bug causes 180-degree duplicate" -
+   disproven; only adjacent (90 deg) arm pairs can be simultaneously lit
+   from one heading value. Root cause must be in theta_deg itself.
+
+2. [PARTIALLY FIXED, DID NOT SOLVE SYMPTOM] luna_update_zero dead-zone
+   counter-reset bug - real bug, fixed, builds fine, but user reported
+   "still 2 copies" afterward (screenshot 2).
+
+3. [BUSTED] "There's a second near object ~180 degrees away causing a
+   second LIDAR near-hit" - directly ruled out by user: only one water
+   bottle exists, nothing else is as close.
+
+4. [TRIED, NO EFFECT] Time-based debounce gate (ZERO_MIN_PERIOD_FRACTION
+   = 0.6 of gyro-derived expected period) - added to reject a 2nd LIDAR
+   near-hit from the same bottle pass that arrives "too soon". Built and
+   flashed; only ~2 "ZERO IGNORED" events appeared in the whole log, and
+   the "2 copies" symptom persisted (screenshot 3, "still 2 copies").
+
+5. [JUST TESTED, RESULT IS AMBIGUOUS / NOT CLEANLY CONFIRMED] "Gyro reads
+   ~2x the true physical rotation rate" - tested by adding per_ms (LIDAR-
+   measured period between accepted zero-crossings) to the diagnostic
+   print and comparing to 1000/rps (gyro-implied period) from telemetry.
+   RESULT (latest log, screenshot 4): per_ms is sometimes ~1.0x of
+   1000/rps and sometimes ~1.9-2.0x of 1000/rps, inconsistently, with no
+   clean uniform ratio. This DOES NOT cleanly confirm the 2x hypothesis
+   (if gyro were uniformly 2x off, ALL per_ms/[1000/rps] ratios should be
+   ~2x, not alternating ~1x and ~2x). Likely BUSTED but not 100% certain
+   given the data is noisy (see below).
+
+IMPORTANT CAVEAT ABOUT THE LATEST LOG (screenshot 4)
+-------------------------------------------------------
+During this log capture, rps was NOT steady - it climbed from rps=4.90 to
+rps=5.17 across the log (the top was still accelerating / spinning up,
+not at constant speed). This means:
+- The 1000/rps reference value itself was changing throughout the log,
+  making per_ms-vs-1000/rps ratio comparisons approximate/noisy.
+- Most (11 of 16) ZERO SET events had small |err| < 30 deg (so they took
+  the SLEW path, no visible jump).
+- BUT 5 of 16 (~31%) ZERO SET events had LARGE |err| (-66.8, +85.5,
+  +30.8, -52.8, +63.9 degrees), which triggers an instant SNAP (theta_deg
+  forced to 0 in one frame - a sudden 30-85 degree jump in the rendered
+  word's position). This abrupt jump, blended via POV persistence with
+  the "normal" position from surrounding revolutions, is a strong
+  candidate for what the user perceives as "2 copies of the word".
+
+CURRENT LEADING QUESTION / NEXT STEP (NOT YET DONE)
+-------------------------------------------------------
+WHY do ~1/3 of revolutions accumulate 30-85 degrees of heading error
+before the next zero-crossing, while the rest stay under ~25 degrees?
+Is this:
+  (a) An artifact of the top still ACCELERATING (rps non-steady) during
+      this particular log capture - i.e. gyro integration error grows
+      when angular velocity is changing? If so, a log captured once the
+      top reaches STEADY (constant) rps might show mostly small errors
+      and far fewer/no SNAPs.
+  (b) A persistent issue even at steady speed, meaning something else is
+      wrong (e.g. occasional double-near-detections within a single
+      bottle pass that DO get accepted as separate ZERO SETs because they
+      are >0.6x period apart but <1.0x period apart - which would NOT
+      trigger "ZERO IGNORED" but would still cause an out-of-phase
+      zero-crossing and a large error on the FOLLOWING crossing).
+
+PROPOSED NEXT STEP (user was asked, chose this just before handoff was
+requested - NOT YET EXECUTED):
+- "Steady-speed test" (no code change): spin the top up, wait until rps
+  in the telemetry STOPS CHANGING (steady state), THEN start/clear the
+  log and capture a fresh log of ZERO SET / per_ms / err / theta lines.
+  Compare against this same per_ms vs 1000/rps and |err| analysis. If
+  errors shrink to consistently <30 deg with no SNAPs at steady speed,
+  hypothesis (a) is confirmed and the SNAP-during-spinup explains the
+  "2 copies" - the fix would then likely be about handling the spin-up
+  transient (or simply: symptom doesn't matter once it's spinning at
+  target speed for the show).
+  If large errors / SNAPs persist at steady speed, move to hypothesis
+  (b): add a more granular diagnostic that logs d_mm samples (or at least
+  a near-hit counter with timestamps) around each zero-crossing to see if
+  the bottle pass produces more than one "near" event close together.
+
+STANDING CONSTRAINTS / WORKING STYLE (carry forward)
+--------------------------------------------------------
+- NO git repository in this project. Any revert must be done manually via
+  the Edit tool, using remembered prior code (cannot use git diff/revert).
+- Don't invent or guess information - say explicitly if more data is
+  needed before proceeding.
+- Don't overthink any single step for more than ~10 minutes; prefer quick
+  empirical tests (flash + log) over long analysis.
+- This is an iterative flash-test-report loop: propose a specific next
+  step/diagnostic or fix, get explicit user approval ("yes"/"ok"/etc"),
+  implement, build (must succeed before reporting done), then wait for
+  the user to flash the device and report back a new log/screenshot.
+- Build command:
+  "$USERPROFILE/.platformio/penv/Scripts/platformio.exe" run -d
+  "/c/Users/yoavl/OneDrive/Documents/PlatformIO/Projects/Spinning_top"
+- All 4 builds done this session succeeded (RAM ~12.1%, Flash ~87.2%).
+
+FILES TOUCHED THIS SESSION
+------------------------------
+- src/luna.cpp: luna_update_zero() - added dead-zone counter reset (else
+  branch). This fix is correct/real and should be KEPT regardless of how
+  the main bug is resolved.
+- src/main.cpp:
+  - Added constants near other heading constants (~line 383-389):
+      HEADING_SLEW_DURATION_US = 80000
+      HEADING_SNAP_THRESHOLD_DEG = 30.0f
+      ZERO_MIN_PERIOD_FRACTION = 0.6f   (debounce gate fraction)
+  - Zero-crossing handling block (~line 1020-1075): added the time-based
+    "too soon" debounce gate (ZERO IGNORED), and the diagnostic print
+    "ZERO SET theta=%.1f err=%.1f per_ms=%.1f\n" (per_ms = zero_period_us
+    converted to ms). Also retains "MISSED ZERO (revolution overdue)"
+    warning from a previous session.
+  - These diagnostics are useful and should likely be KEPT until the bug
+    is resolved (low cost - debug_print_ble, low rate).
+
+FILES REVIEWED, RULED OUT AS DIRECTLY RELEVANT (no edits)
+--------------------------------------------------------------
+- src/jyro.cpp / jyro.h: GYRO_SENS_DPS_PER_LSB=0.07, CTRL6_G=0x04 (comment
+  says FS=+/-2000 dps). No obvious scale-factor bug found, but NOT
+  independently verified against the LSM6DSV datasheet.
+- src/leds.h: confirms 4 arms x 10 LEDs, used for the geometric proof
+  above.
+- src/pov.cpp: an older/alternate POV renderer (pov_init/pov_update,
+  font5x7_col). pov_init() IS called from main.cpp for UI/command
+  purposes, but pov_update()/render_column() are NOT in the active
+  word-rendering path (that's set_word_columns_all in main.cpp). Not
+  relevant to this bug.
+- platformio.ini: no relevant build-flag overrides.
+- main.cpp calibration functions (calibrate_gz_bias,
+  calibrate_gz_bias_over_spins, ~lines 445-560): only additive gz_bias_dps
+  correction, no scale factor found there either.
+
+WHAT TO DO FIRST TOMORROW
+-----------------------------
+1. Re-read this file.
+2. Ask the user to do the STEADY-SPEED test (described above) - no code
+   change needed, just spin up, wait for rps to stabilize in telemetry,
+   clear log, capture fresh ZERO SET / per_ms / err / theta lines plus a
+   couple of telemetry lines for rps reference.
+3. Re-run the per_ms vs 1000/rps and |err| analysis on the new steady-
+   state log to test hypothesis (a) vs (b) above, then proceed
+   accordingly (either accept current behavior as "good enough at
+   steady-state" or design a d_mm-trace diagnostic for double-near-hits).
+==================================================================

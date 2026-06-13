@@ -155,6 +155,11 @@ bool luna_update_zero(LunaZeroRef &z, uint16_t dist_mm, float theta_deg)
       z.armed = true;
       z.far_hits = 0;
     }
+  } else {
+    // Dead zone (between near and far thresholds): require consecutive
+    // near/far readings for debounce, so reset both counters here.
+    z.near_hits = 0;
+    z.far_hits = 0;
   }
   return false;
 }
